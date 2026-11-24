@@ -8,5 +8,5 @@
 // Local includes
 
 // Function prototypes
-
+int ex_0028_DotProduct(int array1[],int array2[],int size);
 #endif // EX_0028_DOTPRODUCT_H
