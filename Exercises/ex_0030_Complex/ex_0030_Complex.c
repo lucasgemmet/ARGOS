@@ -19,18 +19,19 @@ Complex ex_0030_InputComplex(void)
     {
     printf("Please enter a complex number (r,i): ");
     status = scanf(" ( %lf , %lf %c", &value.real,&value.imaginary,&closing);//c doit etre egal a )
-
+    //plus compliquer que d'habitude car il faut verifier que l'utilisateur a bien mis un ) a la fin de son input
     extra = 0;
 
     int c;
     do
     {
     c = getchar();
-    if (c != '\n' && c != EOF && c != ' ' && c != '\t') 
+    if (c != '\n' && c != EOF && c != ' ' && c != '\t')  //verifier que  c ne sois pas sois un tab sois un espace sois un retour a la ligne
     {
         extra = 1;
     }
     } while (c != '\n' && c != EOF);
+
     
     } while (status != EOF && (status != nbExpectedValues || closing != ')' || extra));
     return value;
